@@ -47,7 +47,7 @@ int main()
 			printf("输入错误\n");
 			break;
 		}
-	} while (1);
+	} while (chose);
 	return 0;
 }
 //void game()                \\错误的
