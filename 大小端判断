@@ -1,0 +1,22 @@
+#include<stdio.h>
+union un
+{
+	char c;
+	int i;
+};
+void chack()
+{
+	union un u;
+	u.i = 1;
+	if (u.c == 1)
+	{
+		printf("小端\n");
+	}
+	else
+		printf("大端\n");
+}
+int main()
+{
+	chack();
+	return 0;
+}
