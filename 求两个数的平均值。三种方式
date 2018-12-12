@@ -1,0 +1,24 @@
+#include<stdio.h>
+int ave(int x, int y)
+{
+	return (x + y) >> 1;
+}
+int ave2(int a, int b)
+{
+	return a + (b - a) / 2;
+}
+int ave3(int a, int b)
+{
+	return ((a&b) + ((a^b) >> 1));
+	
+}
+int main()
+{
+	int a = 20;
+	int b = 10;
+	printf("%d\n",ave(a,b));
+	printf("%d\n",ave2(a, b));
+	printf("%d\n", ave3(a, b));
+
+	return 0;
+}
