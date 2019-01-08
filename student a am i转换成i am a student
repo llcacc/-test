@@ -1,0 +1,42 @@
+void change(char* ch ,int sz)
+{
+	char* right = ch+sz-1;
+	char* left = ch;
+	while (left < right)
+	{
+		char temp = 0;
+		temp = *right;
+		*right = *left;
+		*left = temp;
+		left++;
+		right--;
+	}
+}
+void fun(char ch[])
+{							//i ma a tneduts
+	
+	while (*ch != '\0')
+	{
+		char* t = ch;
+		int count = 0;
+		while (*ch != ' '&& *ch != '\0')
+		{
+			ch++;
+			count++;
+		}
+		change(t, count);
+		if (*ch != '\0')
+		{
+			ch++;
+		}
+	}
+}
+int main()
+{
+	char ch[] = "student a am i";          
+	int len = sizeof(ch) / sizeof(ch[0]) - 1;
+	change(ch, len);
+	fun(ch);
+	printf("%s\n", ch);
+	return 0;
+}
