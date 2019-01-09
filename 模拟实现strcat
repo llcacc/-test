@@ -1,0 +1,26 @@
+char *my_strcat(char *dest, const char *rse)
+{
+	assert(dest);
+	assert(rse);
+	char *ret = dest;
+	while (*dest != '\0')
+	{
+		dest++;
+	}
+	while (*dest++=*rse++)
+	{
+		;
+	}
+	
+	return ret;
+}
+int main()
+{
+	char s[20] = "asd";
+	char s2[] = "qwe";
+	char *t =my_strcat(s, s2);
+	printf("%s\n", s);
+	printf("%s\n", t);
+
+	return 0;
+}
