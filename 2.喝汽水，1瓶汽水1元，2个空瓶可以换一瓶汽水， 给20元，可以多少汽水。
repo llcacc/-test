@@ -1,0 +1,15 @@
+int main()
+{
+	int money = 20;
+	int all = 0;
+	int empty = money;
+	all = money;
+	while (empty / 2 != 0)
+	{
+		all += empty / 2;
+		empty = empty / 2+empty % 2;
+
+	}
+	printf("%d\n", all);
+	return 0;
+}
